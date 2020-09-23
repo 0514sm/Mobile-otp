@@ -28,7 +28,7 @@ app.post("/otp",function(req,res){
     requestof2s.headers({
     "content-type": "application/x-www-form-urlencoded",
     "cache-control": "no-cache",
-    "authorization": "Q8gEDnuvyAedhWLo6CHTkZXSVwK4N0JOMftam1iIFB7p2Ulb3juH7Mvd6zn8VILyxWj2wGePBfibChDo"
+    "authorization": "API_KEY_FAST2SMS"
     });
 const otpid = Math.floor(Math.random()*100000);
     requestof2s.form({
@@ -36,7 +36,7 @@ const otpid = Math.floor(Math.random()*100000);
     "language": "english",
     "route": "qt",
     "numbers": req.body.number,
-    "message": process.env.tid,
+    "message": "FAST2SMS_templete_ID",
     "variables": "{#BB#}",
     "variables_values": otpid,
     });
